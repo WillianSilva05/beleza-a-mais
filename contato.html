@@ -3,81 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Entre em contato com a loja Beleza a Mais.">
+    <meta name="description" content="Entre em contato com a equipe da loja Beleza a Mais.">
     <title>Beleza a Mais - Contato</title>
     <link rel="icon" type="image/svg+xml" href="imagens/favicon.svg">
+
+    <!-- Arquivo de Estilos Customizado -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- Cabeçalho e Menu de Navegação -->
     <header>
-        <h1>Beleza a Mais</h1>
+        <div class="container-custom header-content">
+            <div class="brand-wrapper">
+                <img src="imagens/logo.svg" alt="Logotipo Beleza a Mais" class="brand-logo">
+                <h1 class="brand-name">Beleza a Mais</h1>
+            </div>
 
-        <nav>
-            <a href="index.html">Início</a> |
-            <a href="produtos.html">Produtos</a> |
-            <a href="contato.html">Contato</a>
-        </nav>
+            <nav>
+                <a href="index.html">Início</a>
+                <span class="nav-separator">|</span>
+                <a href="produtos.html">Produtos</a>
+                <span class="nav-separator">|</span>
+                <a href="contato.html" class="active">Contato</a>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <section>
-            <h2>Entre em Contato</h2>
+    <!-- Banner da Página de Contato -->
+    <div class="hero-banner">
+        <div class="container-custom">
+            <h2>Fale Conosco</h2>
+            <p>Tire suas dúvidas sobre produtos, envie sugestões ou venha conhecer nosso espaço de bem-estar.</p>
+        </div>
+    </div>
 
-            <form action="#" method="post">
-                <p>
-                    <label for="nome">Nome:</label><br>
-                    <input type="text" id="nome" name="nome" required>
-                </p>
+    <!-- Conteúdo Principal: Formulário e Informações -->
+    <main class="container-custom">
+        <div class="contact-layout-grid">
+            <!-- Formulário de Contato -->
+            <section class="contact-form-section">
+                <h2>Entre em Contato</h2>
 
-                <p>
-                    <label for="email">E-mail:</label><br>
-                    <input type="email" id="email" name="email" required>
-                </p>
+                <form action="#" method="post">
+                    <p>
+                        <label for="nome">Nome Completo:</label>
+                        <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+                    </p>
 
-                <p>
-                    <label for="mensagem">Mensagem:</label><br>
-                    <textarea id="mensagem" name="mensagem" rows="6" cols="40" required></textarea>
-                </p>
+                    <p>
+                        <label for="email">E-mail para Contato:</label>
+                        <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+                    </p>
 
-                <button type="submit">Enviar</button>
-            </form>
+                    <p>
+                        <label for="mensagem">Sua Mensagem:</label>
+                        <textarea id="mensagem" name="mensagem" rows="6" cols="40" placeholder="Como podemos ajudar você hoje?" required></textarea>
+                    </p>
+
+                    <button type="submit">Enviar Mensagem</button>
+                </form>
+            </section>
+
+            <!-- Informações Institucionais -->
+            <section class="contact-card-box">
+                <h2>Informações Institucionais</h2>
+                <address>
+                    <p><strong>Endereço:</strong> Rua das Flores, 100 - Centro</p>
+                    <p><strong>Cidade:</strong> São Paulo/SP - CEP 01000-000</p>
+                    <p><strong>Telefone:</strong> (11) 99999-9999</p>
+                    <p><strong>E-mail:</strong> contato@belezaamais.com.br</p>
+                </address>
+
+                <h3>Horário de Funcionamento</h3>
+                <p>• Segunda a sexta-feira, das 9h às 18h.</p>
+                <p>• Sábado, das 9h às 13h.</p>
+                <p>• Domingos e feriados: fechado.</p>
+            </section>
+        </div>
+
+        <!-- Seção de Localização com Mapa -->
+        <section class="map-section">
+            <div class="section-wrapper">
+                <h2>Nossa Localização</h2>
+            </div>
+            <div class="map-wrapper">
+                <iframe
+                    src="https://www.google.com/maps?q=Rua+das+Flores,+100,+São+Paulo,+SP&output=embed"
+                    width="600"
+                    height="350"
+                    title="Mapa de localização da loja Beleza a Mais"
+                    loading="lazy">
+                </iframe>
+            </div>
         </section>
-
-        <section>
-            <h2>Informações Institucionais</h2>
-            <address>
-                <p>Rua das Flores, 100 - Centro - São Paulo/SP</p>
-                <p>Telefone: (11) 99999-9999</p>
-                <p>E-mail: contato@belezaamais.com.br</p>
-            </address>
-
-            <h3>Horário de Funcionamento</h3>
-            <p>Segunda a sexta-feira, das 9h às 18h.</p>
-            <p>Sábado, das 9h às 13h.</p>
-        </section>
-
-        <section>
-            <h2>Localização</h2>
-            <iframe
-                src="https://www.google.com/maps?q=Rua+das+Flores,+100,+São+Paulo,+SP&output=embed"
-                width="600"
-                height="350"
-                title="Mapa de localização da loja Beleza a Mais"
-                loading="lazy">
-            </iframe>
-        </section>
-
     </main>
 
+    <!-- Rodapé com redes sociais e copyright -->
     <footer>
-        <h2>Contato</h2>
-        <p>E-mail: contato@belezaamais.com.br</p>
-        <p>Telefone: (11) 99999-9999</p>
-        <p>
-            Redes sociais:
-            <a href="#">Instagram</a> |
-            <a href="#">Facebook</a>
-        </p>
-        <p>&copy; 2026 Beleza a Mais. Todos os direitos reservados.</p>
+        <div class="container-custom footer-inner">
+            <div>
+                <h2>Contato</h2>
+                <p>E-mail: contato@belezaamais.com.br</p>
+                <p>Telefone: (11) 99999-9999</p>
+            </div>
+
+            <div>
+                <h2>Redes Sociais</h2>
+                <div class="footer-social-links">
+                    <a href="#">Instagram</a>
+                    <a href="#">Facebook</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-custom footer-copyright">
+            <p>&copy; 2026 Beleza a Mais. Todos os direitos reservados.</p>
+        </div>
     </footer>
 </body>
 </html>

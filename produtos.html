@@ -3,97 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Catálogo de produtos da loja Beleza a Mais.">
+    <meta name="description" content="Catálogo completo de cosméticos botânicos e cuidados pessoais da Beleza a Mais.">
     <title>Beleza a Mais - Produtos</title>
     <link rel="icon" type="image/svg+xml" href="imagens/favicon.svg">
+
+    <!-- Arquivo de Estilos Customizado -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- Cabeçalho e Menu de Navegação -->
     <header>
-        <h1>Beleza a Mais</h1>
+        <div class="container-custom header-content">
+            <div class="brand-wrapper">
+                <img src="imagens/logo.svg" alt="Logotipo Beleza a Mais" class="brand-logo">
+                <h1 class="brand-name">Beleza a Mais</h1>
+            </div>
 
-        <nav>
-            <a href="index.html">Início</a> |
-            <a href="produtos.html">Produtos</a> |
-            <a href="contato.html">Contato</a>
-        </nav>
+            <nav>
+                <a href="index.html">Início</a>
+                <span class="nav-separator">|</span>
+                <a href="produtos.html" class="active">Produtos</a>
+                <span class="nav-separator">|</span>
+                <a href="contato.html">Contato</a>
+            </nav>
+        </div>
     </header>
 
-    <main>
+    <!-- Banner da Página de Produtos -->
+    <div class="hero-banner">
+        <div class="container-custom">
+            <h2>Catálogo de Produtos</h2>
+            <p>Conheça nossa seleção de cosméticos botânicos e cuidados pessoais desenvolvidos com carinho para a sua pele.</p>
+        </div>
+    </div>
+
+    <!-- Conteúdo Principal: Lista de Produtos -->
+    <main class="container-custom">
         <section>
-            <h2>Lista de Produtos</h2>
+            <div class="section-wrapper">
+                <h2>Lista de Produtos</h2>
+            </div>
 
-            <article>
-                <h3>Sabonete Vegetal</h3>
-                <img
-                    src="imagens/sabonete-vegetal.png"
-                    alt="Sabonete vegetal artesanal"
-                    width="300"
-                >
-                <p>Sabonete artesanal com aveia, indicado para uma limpeza suave da pele.</p>
-                <p><strong>Preço: R$ 24,00</strong></p>
-                <a href="contato.html">Comprar</a>
-            </article>
+            <div class="products-grid">
+                <!-- Produto 1: Sabonete Vegetal -->
+                <article class="product-card">
+                    <div class="product-image-wrap">
+                        <img
+                            src="imagens/sabonete-vegetal.png"
+                            alt="Sabonete vegetal artesanal com aveia e lavanda"
+                            width="300"
+                        >
+                    </div>
+                    <h3>Sabonete Vegetal</h3>
+                    <p>Sabonete artesanal com aveia e extratos botânicos, indicado para uma limpeza suave e calmante da pele.</p>
+                    <p class="product-price"><strong>Preço: R$ 24,00</strong></p>
+                    <a href="contato.html" class="btn-buy">Comprar</a>
+                </article>
 
-            <article>
-                <h3>Sérum Facial</h3>
-                <img
-                    src="imagens/serum-facial.png"
-                    alt="Sérum facial em frasco de vidro"
-                    width="300"
-                >
-                <p>Sérum facial leve que auxilia na hidratação e no cuidado diário do rosto.</p>
-                <p><strong>Preço: R$ 68,00</strong></p>
-                <a href="contato.html">Comprar</a>
-            </article>
+                <!-- Produto 2: Sérum Facial -->
+                <article class="product-card">
+                    <div class="product-image-wrap">
+                        <img
+                            src="imagens/serum-facial.png"
+                            alt="Sérum facial radiante em frasco conta-gotas"
+                            width="300"
+                        >
+                    </div>
+                    <h3>Sérum Facial</h3>
+                    <p>Sérum facial leve de rápida absorção que auxilia na hidratação, elasticidade e luminosidade natural do rosto.</p>
+                    <p class="product-price"><strong>Preço: R$ 68,00</strong></p>
+                    <a href="contato.html" class="btn-buy">Comprar</a>
+                </article>
 
-            <article>
-                <h3>Creme Corporal</h3>
-                <img
-                    src="imagens/creme-corporal.png"
-                    alt="Creme hidratante corporal"
-                    width="300"
-                >
-                <p>Creme corporal hidratante para ajudar a manter a pele macia e perfumada.</p>
-                <p><strong>Preço: R$ 54,00</strong></p>
-                <a href="contato.html">Comprar</a>
-            </article>
+                <!-- Produto 3: Creme Corporal -->
+                <article class="product-card">
+                    <div class="product-image-wrap">
+                        <img
+                            src="imagens/creme-corporal.png"
+                            alt="Creme hidratante corporal de amêndoas e karité"
+                            width="300"
+                        >
+                    </div>
+                    <h3>Creme Corporal</h3>
+                    <p>Creme corporal hidratante com manteiga de karité para manter a pele macia, nutrida e delicadamente perfumada.</p>
+                    <p class="product-price"><strong>Preço: R$ 54,00</strong></p>
+                    <a href="contato.html" class="btn-buy">Comprar</a>
+                </article>
 
-            <article>
-                <h3>Óleo Corporal</h3>
-                <img
-                    src="imagens/oleo-corporal.png"
-                    alt="Óleo corporal dourado em frasco de vidro"
-                    width="300"
-                >
-                <p>Óleo corporal nutritivo para ajudar na hidratação e deixar a pele perfumada.</p>
-                <p><strong>Preço: R$ 59,00</strong></p>
-                <a href="contato.html">Comprar</a>
-            </article>
+                <!-- Produto 4: Óleo Corporal -->
+                <article class="product-card">
+                    <div class="product-image-wrap">
+                        <img
+                            src="imagens/oleo-corporal.png"
+                            alt="Óleo corporal dourado nutritivo em frasco de vidro"
+                            width="300"
+                        >
+                    </div>
+                    <h3>Óleo Corporal</h3>
+                    <p>Óleo nutritivo com toque aveludado para pós-banho, selando a hidratação e proporcionando brilho saudável.</p>
+                    <p class="product-price"><strong>Preço: R$ 59,00</strong></p>
+                    <a href="contato.html" class="btn-buy">Comprar</a>
+                </article>
 
-            <article>
-                <h3>Bálsamo Labial</h3>
-                <img
-                    src="imagens/balsamo-labial.png"
-                    alt="Bálsamo labial natural em embalagem redonda"
-                    width="300"
-                >
-                <p>Bálsamo com manteiga de cacau para proteger e hidratar os lábios.</p>
-                <p><strong>Preço: R$ 22,00</strong></p>
-                <a href="contato.html">Comprar</a>
-            </article>
+                <!-- Produto 5: Bálsamo Labial -->
+                <article class="product-card">
+                    <div class="product-image-wrap">
+                        <img
+                            src="imagens/balsamo-labial.png"
+                            alt="Bálsamo labial botânico em latinha com rosas e manteiga de cacau"
+                            width="300"
+                        >
+                    </div>
+                    <h3>Bálsamo Labial</h3>
+                    <p>Bálsamo natural formulado com manteiga de cacau e extrato de rosas para proteger e hidratar lábios ressecados.</p>
+                    <p class="product-price"><strong>Preço: R$ 22,00</strong></p>
+                    <a href="contato.html" class="btn-buy">Comprar</a>
+                </article>
+            </div>
         </section>
     </main>
 
+    <!-- Rodapé com redes sociais e copyright -->
     <footer>
-        <h2>Contato</h2>
-        <p>E-mail: contato@belezaamais.com.br</p>
-        <p>Telefone: (11) 99999-9999</p>
-        <p>
-            Redes sociais:
-            <a href="#">Instagram</a> |
-            <a href="#">Facebook</a>
-        </p>
-        <p>&copy; 2026 Beleza a Mais. Todos os direitos reservados.</p>
+        <div class="container-custom footer-inner">
+            <div>
+                <h2>Contato</h2>
+                <p>E-mail: contato@belezaamais.com.br</p>
+                <p>Telefone: (11) 99999-9999</p>
+            </div>
+
+            <div>
+                <h2>Redes Sociais</h2>
+                <div class="footer-social-links">
+                    <a href="#">Instagram</a>
+                    <a href="#">Facebook</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-custom footer-copyright">
+            <p>&copy; 2026 Beleza a Mais. Todos os direitos reservados.</p>
+        </div>
     </footer>
 </body>
 </html>
