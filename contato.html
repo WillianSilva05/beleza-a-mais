@@ -7,11 +7,11 @@
     <title>Beleza a Mais - Contato</title>
     <link rel="icon" type="image/svg+xml" href="imagens/favicon.svg">
 
-    <!-- Arquivo de Estilos Customizado -->
+    <!-- Estilos da página -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Cabeçalho e Menu de Navegação -->
+    <!-- Cabeçalho e navegação principal -->
     <header>
         <div class="container-custom header-content">
             <div class="brand-wrapper">
@@ -25,11 +25,14 @@
                 <a href="produtos.html">Produtos</a>
                 <span class="nav-separator">|</span>
                 <a href="contato.html" class="active">Contato</a>
+            <span class="nav-separator">|</span>
+                <a href="produtos.html" id="contador-carrinho" class="nav-carrinho" aria-label="Itens no carrinho">🛒 0</a>
+                <button id="btn-tema" type="button" aria-label="Alternar entre tema claro e escuro">🌙 Escuro</button>
             </nav>
         </div>
     </header>
 
-    <!-- Banner da Página de Contato -->
+    <!-- Apresentação da página de contato -->
     <div class="hero-banner">
         <div class="container-custom">
             <h2>Fale Conosco</h2>
@@ -37,14 +40,14 @@
         </div>
     </div>
 
-    <!-- Conteúdo Principal: Formulário e Informações -->
+    <!-- Formulário e informações de contato -->
     <main class="container-custom">
         <div class="contact-layout-grid">
-            <!-- Formulário de Contato -->
+            <!-- Formulário para envio de mensagem -->
             <section class="contact-form-section">
                 <h2>Entre em Contato</h2>
 
-                <form action="#" method="post">
+                <form id="form-contato" action="#" method="post" novalidate>
                     <p>
                         <label for="nome">Nome Completo:</label>
                         <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
@@ -58,13 +61,16 @@
                     <p>
                         <label for="mensagem">Sua Mensagem:</label>
                         <textarea id="mensagem" name="mensagem" rows="6" cols="40" placeholder="Como podemos ajudar você hoje?" required></textarea>
+                        <small id="contador-caracteres">0/500 caracteres</small>
                     </p>
 
                     <button type="submit">Enviar Mensagem</button>
+
+                    <p id="status-msg" role="alert"></p>
                 </form>
             </section>
 
-            <!-- Informações Institucionais -->
+            <!-- Endereço e canais de atendimento -->
             <section class="contact-card-box">
                 <h2>Informações Institucionais</h2>
                 <address>
@@ -81,7 +87,7 @@
             </section>
         </div>
 
-        <!-- Seção de Localização com Mapa -->
+        <!-- Mapa com a localização -->
         <section class="map-section">
             <div class="section-wrapper">
                 <h2>Nossa Localização</h2>
@@ -98,7 +104,7 @@
         </section>
     </main>
 
-    <!-- Rodapé com redes sociais e copyright -->
+    <!-- Rodapé e links para redes sociais -->
     <footer>
         <div class="container-custom footer-inner">
             <div>
@@ -120,5 +126,6 @@
             <p>&copy; 2026 Beleza a Mais. Todos os direitos reservados.</p>
         </div>
     </footer>
+    <script src="js/script.js" defer></script>
 </body>
 </html>

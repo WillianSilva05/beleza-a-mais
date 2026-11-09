@@ -1,31 +1,31 @@
-/* --- Variáveis de Cores, Gradientes e Tipografia --- */
+/* Valores reutilizados nas cores, gradientes e fontes */
 :root {
     --cor-primaria: #c87a6d;
     --cor-primaria-escura: #a6584c;
     --cor-secundaria: #5e7d63;
     --cor-dourado: #d4a373;
     
-    /* Gradientes */
+    /* Gradientes usados nos fundos e botões */
     --gradiente-suave: linear-gradient(135deg, #fff9f6 0%, #fbf0ea 50%, #f4e5df 100%);
     --gradiente-botao: linear-gradient(135deg, #c87a6d 0%, #ab5f52 100%);
     --gradiente-botao-hover: linear-gradient(135deg, #ab5f52 0%, #8c4539 100%);
     --gradiente-card: linear-gradient(180deg, #ffffff 0%, #fdfaf8 100%);
 
-    /* Cores de Fundo e Superfície */
+    /* Cores de fundo e borda */
     --cor-fundo: #faf6f3;
     --cor-branca: #ffffff;
     --cor-borda: #eaded7;
     
-    /* Cores de Texto */
+    /* Cores do texto */
     --cor-texto: #332924;
     --cor-texto-suave: #6e615a;
     
-    /* Fontes */
+    /* Famílias tipográficas */
     --fonte-titulos: Georgia, 'Times New Roman', serif;
     --fonte-padrao: Arial, Helvetica, sans-serif;
 }
 
-/* --- Reset Básico e Padronização Global --- */
+/* Remove espaçamentos padrão e define o estilo global */
 * {
     margin: 0;
     padding: 0;
@@ -39,7 +39,7 @@ body {
     line-height: 1.6;
 }
 
-/* --- Estrutura Centralizada (Container) --- */
+/* Centraliza o conteúdo e limita sua largura */
 .container-custom {
     width: 90%;
     max-width: 1140px;
@@ -47,7 +47,7 @@ body {
     padding: 20px 0;
 }
 
-/* --- Cabeçalho e Menu de Navegação Padronizado --- */
+/* Cabeçalho e navegação principal */
 header {
     background-color: var(--cor-branca) !important;
     border-bottom: 2px solid var(--cor-borda) !important;
@@ -124,7 +124,7 @@ header nav a.active {
     margin: 0 4px;
 }
 
-/* --- Banner de Apresentação com Gradiente --- */
+/* Área de apresentação com fundo em gradiente */
 .hero-banner {
     background: var(--gradiente-suave);
     border-bottom: 1px solid var(--cor-borda);
@@ -148,7 +148,7 @@ header nav a.active {
     margin: 0 auto 22px auto;
 }
 
-/* --- Títulos das Seções --- */
+/* Títulos das seções */
 .section-wrapper {
     text-align: center;
     margin-bottom: 28px;
@@ -165,7 +165,7 @@ section > h2 {
     display: inline-block;
 }
 
-/* --- Seção de Carrossel com Bootstrap --- */
+/* Carrossel de produtos e seus slides */
 .carousel-section {
     background-color: var(--cor-branca);
     border: 1px solid var(--cor-borda);
@@ -243,7 +243,7 @@ section > h2 {
     display: block;
 }
 
-/* Customização dos Controles do Carrossel */
+/* Controles de navegação do carrossel */
 .carousel-control-prev,
 .carousel-control-next {
     width: 45px;
@@ -263,7 +263,7 @@ section > h2 {
     border-radius: 2px;
 }
 
-/* --- Seção Sobre Nós (index.html) --- */
+/* Informações sobre a loja */
 .about-section {
     background-color: var(--cor-branca);
     border: 1px solid var(--cor-borda);
@@ -317,7 +317,7 @@ section > h2 {
     margin-bottom: 6px;
 }
 
-/* --- Vitrine e Cards de Produtos (produtos.html) --- */
+/* Grade de produtos e cartões */
 .products-grid {
     display: flex;
     flex-wrap: wrap;
@@ -388,7 +388,7 @@ section > h2 {
     margin-bottom: 14px;
 }
 
-/* Botões com Gradiente Harmonioso */
+/* Botões de ação */
 .btn-buy {
     display: inline-block;
     background: var(--gradiente-botao);
@@ -411,7 +411,7 @@ section > h2 {
     box-shadow: 0 6px 16px rgba(171, 95, 82, 0.4);
 }
 
-/* --- Layout da Página de Contato (contato.html) --- */
+/* Formulário e informações de contato */
 .contact-layout-grid {
     display: flex;
     gap: 30px;
@@ -508,7 +508,7 @@ address {
     font-weight: normal;
 }
 
-/* Seção do Mapa */
+/* Mapa de localização */
 .map-section {
     text-align: center;
     margin-bottom: 40px;
@@ -529,7 +529,7 @@ address {
     display: block;
 }
 
-/* --- Rodapé --- */
+/* Rodapé */
 footer {
     background-color: #2b2420 !important;
     color: #e8ded8 !important;
@@ -594,7 +594,7 @@ footer a:hover {
     color: #9c8e85;
 }
 
-/* --- Responsividade (Media Queries) --- */
+/* Ajustes de layout para telas menores */
 @media (max-width: 768px) {
     .brand-wrapper {
         flex-direction: column;
@@ -627,3 +627,190 @@ footer a:hover {
         justify-content: center;
     }
 }
+
+
+/* Estilos dos controles interativos */
+
+/* Botão de tema e contador do carrinho */
+header nav { flex-wrap: wrap; }
+
+#btn-tema {
+    background: transparent;
+    color: var(--cor-texto);
+    border: 1px solid var(--cor-primaria);
+    border-radius: 20px;
+    padding: 7px 14px;
+    margin-left: 8px;
+    font-family: var(--fonte-padrao);
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+#btn-tema:hover {
+    background: var(--cor-primaria);
+    color: #ffffff;
+}
+
+header nav a.nav-carrinho {
+    background-color: var(--cor-secundaria) !important;
+    color: #ffffff !important;
+    margin-left: 4px;
+    padding: 7px 14px;
+    font-size: 0.9rem;
+}
+
+header nav a.nav-carrinho:hover {
+    background-color: #4a6650 !important;
+    color: #ffffff !important;
+}
+
+/* Busca de produtos e resumo do carrinho */
+.loja-barra {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 20px;
+    flex-wrap: wrap;
+    background: var(--gradiente-card);
+    border: 1px solid var(--cor-borda);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 28px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.03);
+}
+
+.busca-produtos { flex: 1; min-width: 240px; }
+
+.busca-produtos label {
+    display: block;
+    font-weight: bold;
+    font-size: 0.95rem;
+    margin-bottom: 6px;
+}
+
+.busca-produtos input {
+    width: 100%;
+    padding: 11px 14px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 6px;
+    font-family: var(--fonte-padrao);
+    font-size: 0.95rem;
+    background-color: var(--cor-branca);
+    color: var(--cor-texto);
+}
+
+.busca-produtos input:focus {
+    border-color: var(--cor-primaria);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(200, 122, 109, 0.2);
+}
+
+.carrinho-resumo {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    color: var(--cor-texto-suave);
+}
+
+.carrinho-resumo strong { color: var(--cor-primaria-escura); }
+
+.btn-secundario {
+    background: transparent;
+    color: var(--cor-texto);
+    border: 1px solid var(--cor-borda);
+    border-radius: 20px;
+    padding: 7px 14px;
+    font-family: var(--fonte-padrao);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-secundario:hover { border-color: var(--cor-primaria); color: var(--cor-primaria-escura); }
+
+.sem-resultados {
+    text-align: center;
+    color: var(--cor-texto-suave);
+    margin-bottom: 20px;
+}
+
+/* Oculta os cartões filtrados pela busca */
+.product-card[hidden] { display: none; }
+
+/* Ajustes para o botão de adicionar ao carrinho */
+button.btn-buy {
+    font-family: var(--fonte-padrao);
+    font-size: 1rem;
+}
+
+button.btn-buy:disabled {
+    opacity: 0.75;
+    cursor: default;
+    transform: none;
+}
+
+/* Contador, validação e mensagens do formulário */
+#contador-caracteres {
+    display: block;
+    text-align: right;
+    color: var(--cor-texto-suave);
+    margin-top: 4px;
+    font-size: 0.85rem;
+}
+
+form input.campo-erro,
+form textarea.campo-erro {
+    border-color: #c0392b !important;
+    background-color: #fdecea;
+}
+
+#status-msg {
+    margin-top: 16px;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+#status-msg.msg-erro    { color: #c0392b; }
+#status-msg.msg-sucesso { color: #2e7d32; }
+
+/* Cores aplicadas quando o tema escuro está ativo */
+body { transition: background-color 0.25s ease, color 0.25s ease; }
+
+[data-theme="dark"] {
+    color-scheme: dark;
+    --cor-fundo: #1e1815;
+    --cor-borda: #4a3d36;
+    --cor-texto: #f3eae5;
+    --cor-texto-suave: #c3b5ac;
+    --cor-primaria-escura: #e39a8d;
+    --gradiente-suave: linear-gradient(135deg, #2b2420 0%, #262019 50%, #221c18 100%);
+    --gradiente-card: linear-gradient(180deg, #2b2420 0%, #261f1b 100%);
+}
+
+[data-theme="dark"] header { background-color: #2b2420 !important; }
+
+[data-theme="dark"] header nav a:hover {
+    background-color: #3d332e !important;
+    color: #e39a8d !important;
+}
+
+[data-theme="dark"] .carousel-section,
+[data-theme="dark"] .about-section { background-color: #2b2420; }
+
+[data-theme="dark"] form input[type="text"],
+[data-theme="dark"] form input[type="email"],
+[data-theme="dark"] form textarea,
+[data-theme="dark"] .busca-produtos input {
+    background-color: #1e1815;
+    color: var(--cor-texto);
+}
+
+[data-theme="dark"] form input.campo-erro,
+[data-theme="dark"] form textarea.campo-erro { background-color: #3a1f1c; }
+
+[data-theme="dark"] .product-image-wrap { background-color: #3d332e; }
+[data-theme="dark"] .product-card:hover { border-color: #6a574d; }
+[data-theme="dark"] #status-msg.msg-erro    { color: #ff8a80; }
+[data-theme="dark"] #status-msg.msg-sucesso { color: #8fd19a; }

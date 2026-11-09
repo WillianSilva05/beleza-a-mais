@@ -7,14 +7,14 @@
     <title>Beleza a Mais - Início</title>
     <link rel="icon" type="image/svg+xml" href="imagens/favicon.svg">
     
-    <!-- Framework Bootstrap 5 via CDN para o Carrossel Responsivo -->
+    <!-- Bootstrap para os controles do carrossel -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     
-    <!-- Arquivo de Estilos Customizado -->
+    <!-- Estilos da página -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Cabeçalho e Menu de Navegação -->
+    <!-- Cabeçalho e navegação principal -->
     <header>
         <div class="container-custom header-content">
             <div class="brand-wrapper">
@@ -28,11 +28,14 @@
                 <a href="produtos.html">Produtos</a>
                 <span class="nav-separator">|</span>
                 <a href="contato.html">Contato</a>
+            <span class="nav-separator">|</span>
+                <a href="produtos.html" id="contador-carrinho" class="nav-carrinho" aria-label="Itens no carrinho">🛒 0</a>
+                <button id="btn-tema" type="button" aria-label="Alternar entre tema claro e escuro">🌙 Escuro</button>
             </nav>
         </div>
     </header>
 
-    <!-- Banner de Boas-vindas com Gradiente Acolhedor -->
+    <!-- Apresentação da loja -->
     <div class="hero-banner">
         <div class="container-custom">
             <h2>O seu momento diário de autocuidado</h2>
@@ -41,27 +44,27 @@
         </div>
     </div>
 
-    <!-- Conteúdo Principal -->
+    <!-- Conteúdo principal da página -->
     <main class="container-custom">
 
-        <!-- Carrossel de Produtos em Destaque (Bootstrap) -->
+        <!-- Carrossel de produtos -->
         <section class="carousel-section">
             <div class="section-wrapper">
                 <h2>Destaques da Coleção</h2>
             </div>
 
-            <!-- Componente Carrossel do Bootstrap -->
+            <!-- Estrutura e controles do carrossel -->
             <div id="carrosselProdutos" class="carousel slide" data-bs-ride="carousel">
-                <!-- Indicadores do Carrossel -->
+                <!-- Indicadores dos slides -->
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carrosselProdutos" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                     <button type="button" data-bs-target="#carrosselProdutos" data-bs-slide-to="1" aria-label="Slide 2"></button>
                     <button type="button" data-bs-target="#carrosselProdutos" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
 
-                <!-- Itens / Slides do Carrossel -->
+                <!-- Slides de produtos -->
                 <div class="carousel-inner">
-                    <!-- Slide 1: Sérum Facial -->
+                    <!-- Slide do sérum facial -->
                     <div class="carousel-item active" data-bs-interval="4500">
                         <div class="carousel-slide-content">
                             <img src="imagens/serum-facial.png" alt="Sérum Facial Dourado" class="carousel-slide-img">
@@ -75,7 +78,7 @@
                         </div>
                     </div>
 
-                    <!-- Slide 2: Sabonete Vegetal -->
+                    <!-- Slide do sabonete vegetal -->
                     <div class="carousel-item" data-bs-interval="4500">
                         <div class="carousel-slide-content">
                             <img src="imagens/sabonete-vegetal.png" alt="Sabonete Vegetal Artesanal" class="carousel-slide-img">
@@ -89,7 +92,7 @@
                         </div>
                     </div>
 
-                    <!-- Slide 3: Creme Corporal -->
+                    <!-- Slide do creme corporal -->
                     <div class="carousel-item" data-bs-interval="4500">
                         <div class="carousel-slide-content">
                             <img src="imagens/creme-corporal.png" alt="Creme Corporal Nutritivo" class="carousel-slide-img">
@@ -104,7 +107,7 @@
                     </div>
                 </div>
 
-                <!-- Botões de Controle Anterior e Próximo -->
+                <!-- Navegação entre slides -->
                 <button class="carousel-control-prev" type="button" data-bs-target="#carrosselProdutos" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Anterior</span>
@@ -116,7 +119,7 @@
             </div>
         </section>
 
-        <!-- Seção Sobre Nós, Missão e Valores -->
+        <!-- Informações sobre a loja, missão e valores -->
         <section class="about-section">
             <div class="section-wrapper">
                 <h2>Sobre Nós</h2>
@@ -150,7 +153,7 @@
         </section>
     </main>
 
-    <!-- Rodapé com redes sociais e copyright -->
+    <!-- Rodapé e links para redes sociais -->
     <footer>
         <div class="container-custom footer-inner">
             <div>
@@ -173,7 +176,8 @@
         </div>
     </footer>
 
-    <!-- Script Bundle do Bootstrap (JS para funcionamento do carrossel) -->
+    <!-- Script do Bootstrap para os controles do carrossel -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js" defer></script>
 </body>
 </html>
